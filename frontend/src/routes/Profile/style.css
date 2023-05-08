@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+  
+.page_content {
+    display: flex; 
+    margin-left: 50px;
+    gap: 50px;
+    flex-direction: row;
+}
+
+.column {
+    float: left;
+    /* width: 35%; */
+    height: 90px;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.avatar {
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 40px;
+    width: fit-content;
+    height: fit-content;
+    
+    /*border: 1px solid rgba(0, 0, 0, 0.5);*/
+}
+
+#avatar {
+    width: 15vw;
+    min-width: 200px;
+    height: 15vw;
+    min-height: 200px;
+    border-radius: 100px;
+}
+
+.review-select {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+a, a:visited {
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    width: 45vw;
+}
+
+.review-item {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+
+.blank-user {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 2.5vw;
+}
+
+.account_title {
+    font-size: 30px; 
+    font-weight: bold; 
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+input {
+    width: 60%;
+}
+
+.edit_button {
+    margin-top: 35px;
+    margin-right: 20px;
+    background: none;
+    border: none;
+    text-decoration: underline;
+}
+
+.view_profile {
+    background-color: lightgrey;
+    text-decoration: none;
+    max-width: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-top: 50px;
+    font-size: 15px;
+    border-radius: 15px;
+    padding: 10px 20px 10px 20px;
+    border-width: 2px;
+    border-color: #808080;
+    border-style: solid;
+    color: #ffffff;
+}
+
+.view_profile:hover {
+    background-color: #ffffff;
+}
+
+h6 { 
+    margin: 0; 
+    padding: 1px; 
+    font-weight: 400; 
+    font-size: medium;
+    color: #808080;
+}
+
+p {
+    margin: 0; 
+    padding: 1px;
+    text-align: justify;
+
+    font-size: 14px;
+}
+
+/* mobile */
+@media screen and (max-width: 480px) {
+    .column {
+      width: 100%;
+    }
+
+    .page_content {
+        flex-direction: column;
+        margin-left: 20px;
+    }
+
+    .profile {
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        width: 80vw;
+    }
+
+    .avatar {
+        margin-top: 10px;
+        align-self: center;
+    }
+
+    .rating-item { margin: auto; }
+
+    .review-info {
+        text-align: left;
+    }
+}

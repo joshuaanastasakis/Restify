@@ -1,0 +1,19 @@
+[
+    {"model": "Reservations.Reservation", "pk": 10, "fields": {"property": 1, "user": 1, "start_dt": "2023-05-01", "end_dt": "2023-05-03", "cost": "500", "status": "pending"}},
+    {"model": "Reservations.Reservation", "pk": 11, "fields": {"property": 1, "user": 1, "start_dt": "2023-05-07", "end_dt": "2023-05-09", "cost": "500", "status": "approved"}},
+    {"model": "Reservations.Reservation", "pk": 12, "fields": {"property": 1, "user": 1, "start_dt": "2023-05-11", "end_dt": "2023-05-13", "cost": "500", "status": "approved"}},
+    {"model": "Reservations.Reservation", "pk": 13, "fields": {"property": 1, "user": 1, "start_dt": "2023-05-15", "end_dt": "2023-05-17", "cost": "500", "status": "pending"}},
+    {"model": "Reservations.Reservation", "pk": 14, "fields": {"property": 1, "user": 1, "start_dt": "2023-05-19", "end_dt": "2023-05-21", "cost": "500", "status": "pending"}},
+    {"model": "Reservations.Reservation", "pk": 15, "fields": {"property": 1, "user": 1, "start_dt": "2023-05-23", "end_dt": "2023-05-25", "cost": "500", "status": "pending"}}, 
+    {"model": "Reservations.Reservation", "pk": 16, "fields": {"property": 1, "user": 1, "start_dt": "2023-05-25", "end_dt": "2023-05-27", "cost": "500", "status": "pending"}}, 
+    {"model": "Reservations.Reservation", "pk": 18, "fields": {"property": 1, "user": 1, "start_dt": "2023-05-25", "end_dt": "2023-05-27", "cost": "500", "status": "pending"}},
+    {"model": "Reservations.Reservation", "pk": 20, "fields": {"property": 1, "user": 2, "start_dt": "2023-05-01", "end_dt": "2023-05-03", "cost": "500", "status": "pending"}},
+    {"model": "Reservations.Reservation", "pk": 21, "fields": {"property": 1, "user": 2, "start_dt": "2023-05-07", "end_dt": "2023-05-09", "cost": "500", "status": "approved"}},
+    {"model": "Reservations.Reservation", "pk": 22, "fields": {"property": 1, "user": 2, "start_dt": "2023-05-11", "end_dt": "2023-05-13", "cost": "500", "status": "approved"}},
+    {"model": "Reservations.Reservation", "pk": 23, "fields": {"property": 1, "user": 2, "start_dt": "2023-05-15", "end_dt": "2023-05-17", "cost": "500", "status": "pending"}},
+    {"model": "Reservations.Reservation", "pk": 24, "fields": {"property": 1, "user": 2, "start_dt": "2023-05-19", "end_dt": "2023-05-21", "cost": "500", "status": "pending"}},
+    {"model": "Reservations.Reservation", "pk": 25, "fields": {"property": 1, "user": 2, "start_dt": "2023-05-23", "end_dt": "2023-05-25", "cost": "500", "status": "pending"}}, 
+    {"model": "Reservations.Reservation", "pk": 26, "fields": {"property": 1, "user": 2, "start_dt": "2023-05-25", "end_dt": "2023-05-27", "cost": "500", "status": "pending"}}, 
+    {"model": "Reservations.Reservation", "pk": 27, "fields": {"property": 1, "user": 2, "start_dt": "2023-05-25", "end_dt": "2023-05-27", "cost": "500", "status": "pending"}}
+]
+

@@ -1,0 +1,512 @@
+.property-edit-container {
+    display: grid;
+    grid-template-areas:
+            'header header'
+            'subheader subheader'
+            'images images'
+            'details reserve'
+            'reviews reviews';
+
+    grid-template-columns: auto min-content;
+    gap: 1rem;
+
+    grid-template-rows: min-content min-content min-content min-content min-content;
+
+    padding: 2rem;
+}
+
+body {
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+.listing-item {
+    overflow: hidden;  /* NEW */
+    min-width: 0;
+}
+
+.listing-title {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.listing-header {
+    grid-area: header;
+
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.listing-edit-status-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+#listing-edit-status-label.label-green {
+    font-size: 20px;
+    font-style: normal;
+    color: green;
+}
+
+#listing-edit-status-label.label-orange {
+    font-size: 20px;
+    font-style: italic;
+    color: orange;
+}
+
+#listing-edit-button {
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0.25rem;
+}
+
+#listing-edit-button:not(.button-enabled) {
+    color: rgba(0.5,0.5,0.5,0.5);
+    border: 2px solid grey;
+}
+
+#listing-edit-button:not(.button-enabled):hover {
+    cursor: default;
+}
+
+#listing-edit-button.button-enabled:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.listing-subheader {
+    grid-area: subheader;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.listing-rating-summary {
+    margin-left: 0 !important;
+}
+
+.listing-image-gallery {
+    grid-area: images;
+
+    display: grid;
+    grid-template-areas:
+        'big big . .'
+        'big big . .';
+
+    gap: 0.5rem;
+
+    border-radius: 5px;
+    overflow: hidden;
+
+
+}
+
+.listing-image-item {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.listing-image-item.big {
+    grid-area: big;
+    width:100%;
+    height: 100%;
+}
+
+.listing-image-item:not(.big) {
+    width: 100%;
+}
+
+.list-image-container {
+    position: relative;
+}
+
+.list-image-container > label {
+    position: absolute;
+    right: 0.25rem;
+    top: 0.25rem;
+    color: white;
+}
+
+.listing-details-container-edit {
+    grid-area: details;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.5rem 0 0.5rem 0;
+    gap: 0.5rem;
+
+    justify-items: center;
+}
+
+.listing-host-info-container {
+    display: grid;
+    grid-template-areas: 'thumbnail .' 'thumbnail .';
+    grid-template-columns: 75px auto;
+    gap: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+h2, h3 {
+    margin: 0;
+}
+
+img.headshot {
+    width: 75px;
+    height: 75px;
+    border-radius: 37.5px;
+}
+
+#host-headshot-thumbnail {
+    grid-area: thumbnail;
+}
+
+.basic-amenities-labels-edit {
+    display: grid;
+    grid-template-areas: 'header header' '. .';
+    grid-template-columns: 0.125fr 1fr;
+    justify-content: flex-start;
+    column-gap: 0.25rem;
+    padding: 0.5rem;
+}
+
+.other-amenities-labels-edit {
+    display: grid;
+    grid-template-areas: 'header header' '. .';
+    grid-template-columns: 0.125fr 1fr;
+    justify-content: flex-start;
+    column-gap: 0.25rem;
+    padding: 0.5rem;
+}
+
+.other-amenities-labels-edit > h2 {
+    grid-area: header;
+}
+
+.listing-availability-container {
+
+    width: 400px;
+    grid-area: reserve;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+
+    padding: 1rem;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
+
+    align-items: center;
+}
+
+.availability-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.listing-reservation-input {
+    height: 150px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    border: 1px solid black;
+
+    display: grid;
+    grid-template-areas: 'date1 . date2' 'divider divider divider' 'guests guests guests';
+    grid-template-rows: 1fr 1px 1fr auto;
+}
+
+.listing-reservation-input .horizontal-divider {
+    grid-area: divider;
+    height: 1px;
+}
+
+.date-selector-container {
+    position: relative;
+    padding: 0.5rem;
+    z-index: 0;
+}
+
+.date-selector-label {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+
+}
+
+.date-selector {
+    text-decoration: none;
+    outline: none;
+    border: none;
+
+    height: 100%;
+
+    vertical-align: bottom;
+
+    padding-bottom: 0px;
+
+}
+
+#start-date-selector {
+    grid-area: date1;
+}
+
+#end-date-selector {
+    grid-area: date2;
+}
+
+#guest-selector {
+    grid-area: guests;
+    text-align: center;
+    border: none;
+}
+
+.basic-amenities-labels-edit > h2 {
+    grid-area: header;
+}
+
+.basic-amenities-labels-edit i {
+    width: 13px;
+}
+
+#reserve-button {
+    border: none;
+    outline: none;
+    background-color: darkgray; /* TODO: pick color */
+    border-radius: 10px;
+    width: 100%;
+    height: 60px;
+}
+
+.listing-reservation-costs {
+    display: grid;
+    grid-template-columns: 125px 125px;
+    margin-left: 0;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.listing-reservation-costs .label {
+    text-align: left;
+}
+
+.listing-reservation-costs:not(.label) {
+    text-align: right;
+}
+
+.listing-reviews-container {
+    grid-area: reviews;
+}
+
+.listing-image {
+    object-fit: cover;
+    width: 100%;
+    height: 75%;
+
+    z-index: -100;
+}
+
+.listing-rating-summary {
+    margin-left: auto;
+}
+
+.listing-reviews-container {
+    display: grid;
+    grid-template-areas: 'header header' 'summary reviews';
+    grid-template-columns: 30% 70%;
+    /*row-gap: 0.5rem;*/
+    padding: 0.5rem;
+
+}
+
+#reviews-header {
+    grid-area: header;
+}
+
+#ratings-summary {
+    grid-area: summary;
+    margin-inline: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    max-height: 150px;
+
+    display: grid;
+    grid-template-columns: 125px 30px;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+}
+
+.reviews-container {
+    grid-area: reviews;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.review-card {
+    display: grid;
+    grid-template-areas:
+            'thumbnail name review'
+            'thumbnail date review'
+            'thumbnail rating review';
+    column-gap: 0.5rem;
+
+    border: 1px solid white;
+
+    align-items: center;
+}
+
+.user-headshot-thumbnail {
+    grid-area: thumbnail;
+}
+
+.review-username {
+    grid-area: name;
+}
+
+.review-date {
+    grid-area: date;
+}
+
+.rating-stars {
+    grid-area: rating;
+    padding: 0;
+}
+
+.review-message {
+    margin-top: 0;
+    grid-area: review;
+    max-height: 100px;
+}
+
+/* tablet + mobile */
+@media only screen and (max-width: 743px) {
+    header {
+        /*display: none;*/
+    }
+    .property-edit-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .listing-image-gallery {
+        gap: 0;
+        grid-template-areas:
+            'big'
+            '.';
+    }
+
+    .listing-image-item:not(.big) {
+        display: none;
+    }
+
+    #reserve-button {
+        max-width: 275px;
+    }
+
+    .reviews-container {
+        padding-right: 0;
+    }
+
+    .listing-reviews-container {
+        grid-template-areas: 'header' 'summary' 'reviews';
+        grid-template-columns: 100%;
+
+    }
+
+    .listing-availability-container {
+        width: 100%;
+        margin-right: 2rem;
+    }
+
+    .listing-edit-status-container {
+        /*display: flex;*/
+        flex-direction: column;
+        /*column-gap: 1rem;*/
+        align-items: center;
+    }
+}
+
+.input {
+    height: 1rem;
+    width: 4rem;
+    margin: 0 auto 0 1rem;
+}
+
+.fa-solid:not(.fa-plus):hover {
+    cursor: pointer;
+}
+
+::file-selector-button {
+    display: none;
+}
+
+::-webkit-file-upload-button {
+    display: none;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.listings-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.listing-list-row-container > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listing-list-row-item {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.listing-list-row-item > input[type=number] {
+    width: 50px;
+}
+
+.fa-trash, .fa-ban {
+    color: red;
+}
+
+.fa-save {
+    color: green
+}
+
+.fa-plus {
+    color: green;
+    cursor: default;
+}
+
+button#deletepropertybutton {
+    background-color: red;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 120px;
+    height: 60px;
+}

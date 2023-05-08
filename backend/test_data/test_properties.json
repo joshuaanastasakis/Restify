@@ -1,0 +1,23 @@
+[
+  {"model": "Properties.Property", "pk":  1, "fields": {"host": 2, "address": "123 First Ave", "city": "Toronto", "province": "Ontario", "postal": "M1M1M1", "country": "Canada", "description": "Quaint property", "name": "Quaint", "max_guests": 2, "num_bed": 1, "num_bath": 1}},
+  {"model": "Properties.Property", "pk":  2, "fields": {"host": 2, "address": "123 Second Ave", "city": "Toronto", "province": "Ontario", "postal": "M1M1M1", "country": "Canada", "description": "Fair property", "name": "Fair", "max_guests": 2, "num_bed": 1, "num_bath": 1}},
+  {"model": "Properties.Property", "pk":  3, "fields": {"host": 2, "address": "123 Third Rd", "city": "Toronto", "province": "Ontario", "postal": "M1M1M1", "country": "Canada", "description": "Small property", "name": "Small", "max_guests": 1, "num_bed": 1, "num_bath": 1}},
+  {"model": "Properties.Property", "pk":  4, "fields": {"host": 3, "address": "123 Fourth Ave", "city": "Toronto", "province": "Ontario", "postal": "M1M1M1", "country": "Canada", "description": "Noisy property", "name": "Noisy", "max_guests": 5, "num_bed": 3, "num_bath": 4}},
+  {"model": "Properties.Property", "pk":  5, "fields": {"host": 3, "address": "123 Fifth St", "city": "Toronto", "province": "Ontario", "postal": "M1M1M1", "country": "Canada", "description": "Medium property", "name": "Medium", "max_guests": 4, "num_bed": 2, "num_bath": 2}},
+  {"model": "Properties.Property", "pk":  6, "fields": {"host": 3, "address": "123 Sixth Cres", "city": "Toronto", "province": "Ontario", "postal": "M1M1M1", "country": "Canada", "description": "Bright property", "name": "Bright", "max_guests": 2, "num_bed": 1, "num_bath": 1}},
+  {"model": "Properties.Property", "pk":  7, "fields": {"host": 3, "address": "123 Seventh St", "city": "Toronto", "province": "Ontario", "postal": "M1M1M1", "country": "Canada", "description": "Large property", "name": "Large", "max_guests": 6, "num_bed": 4, "num_bath": 3}},
+  {"model": "Properties.Property", "pk":  9, "fields": {"host": 5, "address": "123 Ninth Ave", "city": "Toronto", "province": "Ontario", "postal": "M1M1M1", "country": "Canada", "description": "Massive property", "name": "Massive", "max_guests": 10, "num_bed": 5, "num_bath": 5}},
+  {"model": "Properties.Property", "pk":  8, "fields": {"host": 3, "address": "123 Eighth Rd", "city": "Toronto", "province": "Ontario", "postal": "M1M1M1", "country": "Canada", "description": "Humongous property", "name": "Humongous", "max_guests": 20, "num_bed": 10, "num_bath": 7}},
+  {"model": "Properties.Property", "pk": 10, "fields": {"host": 5, "address": "123 Tenth Ave", "city": "Toronto", "province": "Ontario", "postal": "M1M1M1", "country": "Canada", "description": "Exquisite property", "name": "Exquisite", "max_guests": 5, "num_bed": 2, "num_bath": 1}},
+  {"model": "Amenities.Amenity", "pk": 1, "fields": {"property": 1, "title": "gym"}},
+  {"model": "Amenities.Amenity", "pk": 2, "fields": {"property": 1, "title": "dryer"}},
+  {"model": "Amenities.Amenity", "pk": 3, "fields": {"property": 1, "title": "kitchen"}},
+  {"model": "Amenities.Amenity", "pk": 4, "fields": {"property": 2, "title": "kitchen"}},
+  {"model": "Amenities.Amenity", "pk": 5, "fields": {"property": 3, "title": "kitchen"}},
+  {"model": "Amenities.Amenity", "pk": 6, "fields": {"property": 3, "title": "BBQ"}},
+  {"model": "Amenities.Amenity", "pk": 7, "fields": {"property": 4, "title": "gym"}},
+  {"model": "Amenities.Amenity", "pk": 8, "fields": {"property": 4, "title": "sauna"}},
+  {"model": "Amenities.Amenity", "pk": 9, "fields": {"property": 4, "title": "hot tub"}},
+  {"model": "Amenities.Amenity", "pk": 10, "fields": {"property": 5, "title": "fireplace"}}
+
+]

@@ -1,0 +1,8 @@
+[
+  {"username": "user1", "email": "email1@gmail.com", "first_name": "User 1", "last_name": "Last Name", "password1": "abcd1234", "password2": "abcd1234", "phone": 4164164164},
+  {"username": "user2", "email": "email2@gmail.com", "first_name": "User 2", "last_name": "Last Name", "password1": "abcd1234", "password2": "abcd1234", "phone": 1234567890},
+  {"username": "user3", "email": "email3@gmail.com", "first_name": "User 3", "last_name": "Last Name", "password1": "abcd1234", "password2": "abcd1234", "phone": 9876543210},
+  {"username": "user4", "email": "email4@gmail.com", "first_name": "User 4", "last_name": "Last Name", "password1": "abcd1234", "password2": "abcd1234", "phone": 1239874565},
+  {"username": "user5", "email": "email5@gmail.com", "first_name": "User 5", "last_name": "Last Name", "password1": "abcd1234", "password2": "abcd1234", "phone": 7893214565},
+  {"username": "user6", "email": "email6@gmail.com", "first_name": "User 6", "last_name": "Last Name", "password1": "abcd1234", "password2": "abcd1234", "phone": 1112223335}
+]

@@ -1,0 +1,586 @@
+.listing-card {
+    display: flex;
+    gap: 0.5rem;
+
+    flex-direction: column;
+
+    height: 300px;
+
+    /*min-width: 250px;*/
+    margin: 1rem;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.listing-card * {
+    pointer-events: none;
+}
+
+a.listing-card, a.listing-card:focus, a.listing-card:active, a.listing-card:visited, a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+.listing-image {
+    object-fit: cover;
+    width: 100%;
+    height: 75%;
+}
+
+.listing-details {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 0.5fr;
+
+    grid-auto-flow: column;
+
+    gap: 0.25rem;
+
+    height: 25%;
+}
+
+.listing-rating-summary {
+    margin-left: auto;
+}
+
+.listing-details-item {
+}
+
+/* mobile */
+
+#property-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 1rem;
+
+}
+@media only screen and (max-width: 549px) {
+    #property-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* tablet */
+@media only screen and (min-width: 550px) and (max-width: 743px) {
+    #property-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.fw200 { font-weight: 200; }
+.fw400 { font-weight: 400; }
+.fw600 { font-weight: 600; }
+.fw800 { font-weight: 800; }
+
+.fs10 { font-size: 10px; }
+.fs12 { font-size: 12px; }
+.fs14 { font-size: 14px; }
+.fs16 { font-size: 16px; }
+.fs18 { font-size: 18px; }
+.fs20 { font-size: 20px; }
+.fs22 { font-size: 22px; }
+.fs24 { font-size: 24px; }
+
+.h10 { height: 10px; }
+.h12 { height: 12px; }
+.h14 { height: 14px; }
+.h16 { height: 16px; }
+.h18 { height: 18px; }
+.h20 { height: 20px; }
+.h22 { height: 22px; }
+.h24 { height: 24px; }
+
+
+.property-details-container {
+    display: grid;
+    grid-template-areas:
+            'header header'
+            'subheader subheader'
+            'images images'
+            'details reserve'
+            'reviews reviews';
+
+    grid-template-columns: auto min-content;
+    gap: 1rem;
+
+    padding: 2rem;
+}
+
+body {
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+.listing-header {
+    grid-area: header;
+
+    margin: 0;
+}
+
+#editpropertybutton {
+    background-color: orange;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 120px;
+    height: 60px;
+    text-align: center;
+}
+
+
+.property-header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.property-header-item {
+    width: 100%;
+    margin-left: 10px;
+}
+
+.listing-subheader {
+    grid-area: subheader;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.listing-rating-summary {
+    margin-left: 0 !important;
+}
+
+.listing-image-gallery {
+    grid-area: images;
+
+    display: grid;
+    grid-template-areas:
+        'big big . .'
+        'big big . .';
+
+    gap: 0.5rem;
+
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.listing-image-item {
+    object-fit: cover;
+}
+
+.listing-image-item.big {
+    grid-area: big;
+    width:100%;
+    height: 100%;
+}
+
+.listing-image-item:not(.big) {
+    width: 100%;
+}
+
+.listing-details-container {
+    grid-area: details;
+
+    display: grid;
+    padding: 0.5rem 0 0.5rem 0;
+    gap: 0.5rem;
+
+}
+
+.listing-host-info-container {
+    display: grid;
+    grid-template-areas: 'thumbnail .' 'thumbnail .';
+    grid-template-columns: 75px auto;
+    column-gap: 1rem;
+    /*padding-left: 0.5rem;*/
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.listing-host-info-container:nth-child(1), .listing-host-info-container:nth-child(2) {
+    align-content: flex-start;
+}
+
+h2, h3 {
+    /*margin: auto 0 auto 0;*/
+    margin: 0;
+    padding: 0;
+}
+
+img.headshot {
+    width: 75px;
+    height: 75px;
+    border-radius: 37.5px;
+}
+
+#host-headshot-thumbnail {
+    grid-area: thumbnail;
+}
+
+.basic-amenities-labels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.other-amenities-labels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 4rem;
+    row-gap: 1rem;
+    padding: 0.5rem;
+}
+
+.listing-reservation-container {
+    grid-area: reserve;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    row-gap: 1rem;
+
+    padding: 1rem 0.5rem 1rem 0.5rem;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
+
+    align-items: center;
+}
+
+.listing-reservation-input {
+    height: 150px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    border: 1px solid black;
+
+    display: grid;
+    grid-template-areas: 'date1 . date2' 'divider divider divider' 'guests guests guests';
+    grid-template-rows: 1fr 1px 1fr auto;
+}
+
+.listing-reservation-input .horizontal-divider {
+    grid-area: divider;
+    height: 1px;
+}
+
+.date-selector-container {
+    position: relative;
+    padding: 0.5rem;
+    z-index: 0;
+}
+
+.date-selector-label {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+
+}
+
+.date-selector {
+    text-decoration: none;
+    outline: none;
+    border: none;
+
+    height: 100%;
+
+    vertical-align: bottom;
+
+    padding-bottom: 0px;
+
+}
+
+#start-date-selector {
+    grid-area: date1;
+    width: 100%;
+}
+
+#end-date-selector {
+    width: 100%;
+    grid-area: date2;
+}
+
+#guest-selector {
+    grid-area: guests;
+    text-align: center;
+    border: none;
+}
+
+.basic-amenities-labels * {
+    font-size: 20px;
+}
+
+#reserve-button {
+    /*border: none;*/
+    /*outline: none;*/
+    background-color: darkgray; /* TODO: pick color */
+    border-radius: 10px;
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+}
+
+#reserve-button:disabled {
+    cursor: not-allowed;
+}
+
+.listing-reservation-costs {
+    display: grid;
+    grid-template-columns: 125px 125px;
+    margin-left: 0;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.listing-reservation-costs .label {
+    text-align: left;
+}
+
+.listing-reservation-costs:not(.label) {
+    text-align: right;
+}
+
+.listing-reviews-container {
+    grid-area: reviews;
+    /*background-color: blue;*/
+    /*border-top: 1px solid black;*/
+    /*height: 100px;*/
+}
+
+.listing-image {
+    object-fit: cover;
+    width: 100%;
+    height: 75%;
+}
+
+.listing-rating-summary {
+    margin-left: auto;
+}
+
+.listing-reviews-container {
+    display: grid;
+    grid-template-areas: 'header header' 'summary reviews';
+    grid-template-columns: 30% 70%;
+    /*row-gap: 0.5rem;*/
+    padding: 0.5rem;
+
+}
+
+#reviews-header {
+    grid-area: header;
+}
+
+#ratings-summary {
+    grid-area: summary;
+    margin-inline: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    max-height: 150px;
+
+    display: grid;
+    grid-template-columns: 125px 30px;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+}
+
+.reviews-container {
+    grid-area: reviews;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.review-card {
+    display: grid;
+    grid-template-areas:
+            'thumbnail name review'
+            'thumbnail date review'
+            'thumbnail rating review'
+            'reply reply reply';
+    column-gap: 0.5rem;
+
+
+    border: 1px solid white;
+
+    align-items: center;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.user-headshot-thumbnail {
+    grid-area: thumbnail;
+}
+
+.review-username {
+    grid-area: name;
+}
+
+.review-date {
+    grid-area: date;
+}
+
+.rating-stars {
+    grid-area: rating;
+    padding: 0;
+}
+
+.review-message {
+    margin-top: 0;
+    grid-area: review;
+    max-height: 100px;
+}
+
+.reply-card {
+    margin-top: 1rem;
+    margin-left: 1rem;
+
+    padding: 0.5rem;
+    /*border: 1px solid black;*/
+    border-radius: 5px;
+    background-color: lightgray;
+
+
+    grid-area: reply;
+    max-height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    row-gap: 0.125rem;
+
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* tablet + mobile */
+@media only screen and (max-width: 743px) {
+    .property-details-container {
+        grid-template-areas:
+            'header'
+            'subheader'
+            'images'
+            'details'
+            'reserve'
+            'reviews';
+        grid-template-columns: auto;
+    }
+
+    .listing-image-gallery {
+        gap: 0;
+        grid-template-areas:
+            'big';
+    }
+
+    .listing-image-item:not(.big) {
+        display: none;
+    }
+
+    #reserve-button {
+        max-width: 275px;
+    }
+
+    .reviews-container {
+        padding-right: 0;
+    }
+
+    .listing-reviews-container {
+        grid-template-areas: 'header' 'summary' 'reviews';
+        grid-template-columns: 100%;
+
+    }
+
+    .review-card {
+        display: grid;
+        grid-template-areas:
+            'thumbnail name name'
+            'thumbnail date date'
+            'thumbnail rating rating'
+            'review review review'
+            'reply reply reply';
+
+        grid-template-columns: min-content;
+        row-gap: 0.5rem;
+
+        border: 1px solid white;
+
+        align-items: center;
+
+        justify-content: flex-start;
+    }
+
+    .reply-card {
+        margin-top: -1rem;
+    }
+
+    .reply-card .reply-host {
+        font-size: 18px;
+    }
+
+    .reply-card .reply-date {
+        font-size: 15px;
+    }
+
+    .listing-reservation-input {
+        display: flex;
+        flex-direction: column;
+
+
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .listing-reservation-input .vertical-divider, listing-reservation-input .horizontal-divider{
+        display: none;
+    }
+
+    .date-selector-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 1rem;
+        z-index: 0;
+        height: 50px;
+        /*padding: 0;*/
+        /*margin-inline: auto;*/
+    }
+
+    .date-selector-label {
+        position: initial;
+    }
+
+    .date-selector {
+        text-decoration: none;
+        outline: none;
+        border: none;
+
+    }
+
+    select#guest-selector {
+        align-self: center;
+        justify-self: center;
+        height: 75%;
+        font-size: 15px;
+    }
+
+
+}
+
+.date-error {
+    color: red;
+    font-weight: bold;
+}
